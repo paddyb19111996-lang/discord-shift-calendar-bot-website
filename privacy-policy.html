@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Privacy Policy | Discord Shift Calendar Bot</title><meta name="description" content="How Discord Shift Calendar Bot handles work rota screenshots and Google Calendar data."><style>
+:root{color-scheme:light;--text:#1b2731;--muted:#526273;--border:#d9e2e8;--accent:#2563eb;--bg:#f5f8fc;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text)}
+header{background:#162838;color:#fff;padding:24px 22px}header .wrap{max-width:830px;margin:0 auto}nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap}nav a{color:#cde4ff;text-decoration:none}nav a:hover{text-decoration:underline}nav strong{margin-right:auto}
+main{max-width:830px;margin:34px auto 70px;background:var(--white);padding:clamp(24px,5vw,54px);border:1px solid var(--border);border-radius:16px;box-shadow:0 6px 26px rgba(24,39,52,.04)}h1{font-size:clamp(30px,4vw,43px);line-height:1.16;margin:0 0 14px}h2{font-size:21px;line-height:1.3;margin-top:32px;margin-bottom:9px}p{margin:12px 0}ul{padding-left:23px;margin:12px 0}li{margin:6px 0}.lead{font-size:18px;color:#445768}.meta{color:#697a8a;font-size:14px}.callout{border-left:4px solid #6da6ec;background:#f0f6ff;padding:13px 17px;border-radius:4px;margin:23px 0}.needs-edit{background:#fff1cf;padding:2px 5px;font-weight:700;border-radius:3px}a{color:#1355b2}footer{text-align:center;color:#576978;font-size:13px;padding:0 18px 32px}@media(max-width:550px){main{margin:0;border-radius:0;border-left:0;border-right:0}header{padding:20px}}
+</style></head>
+<body><header><div class="wrap"><nav><strong>Discord Shift Calendar Bot</strong><a href="index.html">Home</a><a href="privacy-policy.html">Privacy policy</a></nav></div></header>
+<main>
+<h1>Privacy Policy</h1>
+<p class="meta">Discord Shift Calendar Bot · Effective date: 28 October 2026</p>
+<p class="lead">This notice explains how Discord Shift Calendar Bot (the “Bot”), a privately operated, non-commercial tool, handles information when turning work rota screenshots into Google Calendar appointments.</p>
+<h2>1. Who operates the Bot</h2>
+<p>The Bot is operated by an individual for a small private group. It is not a public sign-up service. For privacy questions or requests, contact paddyb19111996@gmail.com.</p>
+<h2>2. What the Bot does</h2>
+<p>A permitted Discord user posts an image of a work rota. The Bot sends the image to Anthropic’s Claude API to extract working dates and start and finish times. It displays the proposed shifts in Discord for review. After the user clicks “Add to calendar”, it creates a 30-minute drop-off appointment beginning 45 minutes before each shift and a pickup appointment beginning at the shift’s finishing time. It may invite configured personal and work email addresses to those events.</p>
+<h2>3. Information processed</h2>
+<ul>
+<li><strong>Discord information:</strong> uploaded rota screenshots, attachment filenames and content types, relevant Discord user IDs and the extracted shift dates and times.</li>
+<li><strong>Google Calendar information:</strong> access permission granted through Google OAuth; calendar identifier; and event details such as titles, dates, times, descriptions, and the email addresses of invited attendees.</li>
+<li><strong>Local operational information:</strong> authentication tokens, configured attendee email addresses, event identifiers and diagnostic messages.</li>
+</ul>
+<p>The Bot requests the Google Calendar events permission (<code>https://www.googleapis.com/auth/calendar.events</code>) so it can create and manage events. Its current workflow creates events after confirmation; it does not read Gmail messages, contacts, Google Drive files, or the contents of other calendar events.</p>
+<h2>4. How information is used</h2>
+<ul>
+<li>To recognise shifts shown in screenshots and present them for confirmation.</li>
+<li>To create drop-off and pickup calendar events and avoid duplicate event creation.</li>
+<li>To send calendar invitations to the email addresses configured by the operator.</li>
+<li>To diagnose errors and maintain the Bot’s operation.</li>
+</ul>
+<p>Information is not used for advertising, profiling, or sale to data brokers.</p>
+<h2>5. When information is shared</h2>
+<ul>
+<li><strong>Anthropic (Claude API):</strong> rota screenshots and extraction instructions are sent to Anthropic so the AI model can identify shifts. Google Calendar API data is not sent to Claude by this Bot.</li>
+<li><strong>Google Calendar:</strong> event details and attendees’ email addresses are sent to Google to create events and issue invitations. Other people invited to a calendar event may be able to see the event details and guest list, depending on their calendar settings.</li>
+<li><strong>Discord:</strong> screenshots are submitted through Discord, and extracted shift previews and confirmations appear in the relevant Discord conversation. Discord processes information under its own policies.</li>
+</ul>
+<p>The operator does not sell Google user data or provide it to advertising services. Information obtained through Google APIs is used only to provide the calendar functionality described above, in accordance with the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including applicable Limited Use requirements.</p>
+<h2>6. Storage and retention</h2>
+<ul>
+<li>The Bot processes screenshot files in memory and does not intentionally save permanent copies of the uploaded image to the local computer. Copies submitted to Discord or processed by Anthropic are subject to those providers’ own retention policies.</li>
+<li>Google OAuth authorisation tokens are stored locally in a <code>token.json</code> file on the operator’s Windows computer, rather than on a public website.</li>
+<li>The local <code>bot.log</code> file may contain extracted shift dates and times, attachment names, and error diagnostics. These logs are retained on the computer until the operator deletes or rotates them.</li>
+<li>Calendar events remain in Google Calendar until they are deleted by an authorised calendar user. Google and other recipients may retain invitation records under their respective policies.</li>
+</ul>
+<h2>7. Security and access</h2>
+<p>The Bot is intended to run on the operator’s own Windows computer and in a private Discord environment. The operator is responsible for limiting access to the Discord channel and computer, protecting API keys and Google OAuth tokens, and reviewing logs. No system can guarantee absolute security.</p>
+<h2>8. Choices and deletion</h2>
+<p>Users can choose not to submit screenshots or confirm calendar creation. The Google account holder can revoke access through their Google Account’s third-party connections settings. An authorised calendar user can delete created events in Google Calendar. The operator can remove local tokens and logs and can stop or remove the Bot. For help requesting deletion of locally retained information, contact paddyb19111996@gmail.com.</p>
+<h2>9. Changes</h2>
+<p>This policy may be updated if the Bot’s features or data handling change. The effective date at the top will be updated, and any material changes to how Google user data is used will be disclosed before the new use begins.</p>
+<h2>10. Contact</h2>
+<p>Privacy and data requests: paddyb19111996@gmail.com.</p>
+
+</main><footer>Discord Shift Calendar Bot · Private, non-commercial utility</footer></body></html>
